@@ -16,14 +16,15 @@ class Solution{
 public:
     bool isLucky(int n) {
         // code here
-        int x=2;
-        while(x<=n){
-            if(n%x==0)return 0;
-            n-=n/x;
-            ++x;
-        }
-        return 1;
+         int x = 2;
+    while (x <= n) {
+        if (n % x == 0)
+            return false; // n is not a lucky number
+        n -= n / x;
+        ++x;
     }
+    return true; // n is a lucky number
+ }
 };
 
 //{ Driver Code Starts.
